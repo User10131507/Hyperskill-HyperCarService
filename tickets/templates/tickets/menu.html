@@ -1,0 +1,8 @@
+{% extends "tickets/base.html" %}
+{% block content %}
+    <ul>
+        {% for service in services %}
+            <li><a target="_blank" href="/get_ticket/{{ service }}">{{ service.title.split|join:"_" }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
